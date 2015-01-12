@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Главная</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<ul class="nav nav-tabs">
+			<li role="presentation" class="active">
+				<a href="create_user.html">Регистрация</a>
+			</li>
+			<li role="presentation">
+				<a href="scripts/show_user.php?user_id=33">Профиль</a>
+			</li>
+		</ul>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading"><h2 class="panel-title">Регистрация</h2></div>
+		<div class="panel-body">
+			<form action="scripts/create_user.php" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="firstName" >Имя</label>
+					<input type="text" class="form-control" name="firstName" placeholder="Виталий"> 
+				</div>
+				<div class="form-group">
+					<label for="lastName">Фамилия</label>
+					<input type="text" class="form-control" name="lastName" placeholder="Хотей"> 
+				</div>
+				<div class="form-group">
+					<label for="email">Почта</label>
+					<input type="text" class="form-control" name="email" placeholder="some@gmail.com"> 
+				</div>
+				<div class="form-group">
+					<label for="facebookUrl">URL Facebbok</label>
+					<input type="text" class="form-control" name="facebookUrl" placeholder="facebook.com/name"> 
+				</div>
+				<div class="form-group">
+					<label for="twitterHandle">Id Twitter</label>
+					<input type="text" class="form-control" name="twitterHandle" placeholder="adept_v" > 
+				</div>
+				<label for="user_pic">Аватар:</label> <br />
+				<input type="file" id="exampleInputFile" name="user_pic"> <br />
+				<label for="bio">Биография:</label> <br />
+				<textarea name="bio" class="form-control" rows="3"></textarea> <br />
+				<input type="submit" class="btn btn-danger" name="upload" value="Вступить">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
